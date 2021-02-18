@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./índice.ico">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial ;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            background: #FAFAFA;
+            color: #262626;
+        }
+        nav{
+            background: white;
+        }
+        .header-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 1024px;
+            margin: 0 auto;
+        }
+        figure.logo1 {
+            width: 150px;
+        }
+        img{
+            width: 100%;
+        }
+        .search-container{
+            display: grid;
+            justify-content: center;
+        }
+        .search-box{
+            background: #FAFAFA;
+            width: fit-content;
+            border: solid #dbdbdb 1px;
+            width: 199px;
+            padding: 2px;
+
+        }
+        .search-box input[type="search"] {
+            border: none;
+            background: no-repeat;
+            font-size: 16px;
+            padding: 3px;
+            width: 72px;
+        }
+        a:link, a:visited{
+            color: #003569;
+            text-decoration: none;
+        }
+        a.website {
+            font-weight: bold;
+        }   
+        .profile{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 30px;
+            justify-content: 30px;
+            max-width: 932px;
+            margin: auto;
+            padding-top: 100px;
+            padding-bottom: 30px;
+        }
+        .picture-container{
+            display: grid;
+            justify-content: center;
+            align-items: top;
+            margin: 0;
+        }
+        .profile-pic{
+            width: 150px;
+            margin: 0;
+        }
+        .profile-pic img{
+            width: 100%;
+            border-radius: 50%;
+            margin: 0;
+        }
+
+        .title-bar h1, .follow-section, .more-horiz{
+            float: left;
+            padding-right: 20px;
+            margin: 0;
+        }
+        ul.engagement-section{
+            padding: 0;
+            margin: 20px 0 ;
+        }
+        .engagement-section li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 30px;
+
+        }
+        h2{
+            margin: 0;
+            padding: 0;
+        }
+        .material-icons{
+            display: inline;
+            overflow: hidden;
+
+        }
+        button{
+            font-size: 16px;
+            height: 26px;
+            background: none;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            margin-right: 10px;
+
+        }
+        .more-horiz{
+            border: none;
+        }
+        .morearrow-section i{
+            padding-right: 0;
+            padding-left:0;  
+            margin: -7px
+        }
+        .follow-section{
+            padding: 0;
+            bottom: 0;
+            display: flex;
+            align-items: top;
+        }        
+        button.following{
+            padding: 0 24px;
+        }
+        .title-bar{
+            width: 100%;
+            display: block;
+        }
+        .title-bar h1{
+            font-size: 28px;
+            font-weight: normal;
+        }    
+            
+        .text-section h2 {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        p.profile-description {
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+        .friends-following {
+            margin: 10px 0;
+            font-size: 12px;
+        }
+        .friends-following a {
+            text-decoration: none;
+        }
+        a.profile-link {
+            color: #262626;
+        }
+        a.more-friends {
+            color: #A8A8A8;
+        }
+        section.stories-section {
+            margin-bottom: 50px;
+            align-items: center;
+            display: grid;
+        }        
+        ul.stories-list {
+            width: fit-content;
+            margin: auto;
+            min-width: 1024px;
+        }
+        li.story {
+            list-style: none;
+            display: inline-grid;
+            margin: 0 auto;
+            text-align: center;
+            width: 130px;
+            height: 130px;
+        }
+        figure.storie-image img {
+            border-radius: 50%;
+            width: 77px;
+        }
+        .post-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 293px));
+            justify-content: center;
+            grid-gap: 28px;
+        }
+        .post {
+            cursor: pointer;
+            position: relative;
+            display: block;
+        }
+        .post-image {
+            margin: 0;
+        }
+        .post-image img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .post-overlay {
+            background: rgba(0,0,0, .4);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .post:hover .post-overlay {
+            display:flex;
+        }
+        .post-likes,
+        .post-comments {
+            width: 80px;
+            margin: 5px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+        }
+        .engagement-section{
+            width: 100%;
+            float: left;
+        }
+        section.text-section{
+            float: left;
+        }
+        @media screen and (max-width: 768px) {
+            .post-list{
+                grid-gap: 3px;;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-header">
+        <div class="header-wrapper">
+            <div class="instagram-logos">
+                <figure class="logo1"><img src="./735145cfe0a4.png" alt=""></figure>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="icon icon-search"><i class="fa fa-search"></i></span>
+                    <input type="search" placeholder="Buscar..." />
+                </div>
+            </div>
+            <div class="header-icons"></div>
+        </div>
+    </nav>
+    <header class="profile">
+        <section class="picture-container">
+            <figure class="profile-pic">
+                <img src="https://picsum.photos/290?random=17" alt="">
+            </figure>
+        </section>
+        <section class="profile-info">
+            <section class="title-bar">
+                <h1>Iridian Irinah</h1>
+                <span class="follow-section">
+                    <button class="following">Siguiendo</button>
+                    <button class="morearrow-section">
+                        <i class="material-icons">
+                                arrow_drop_down
+                        </i>
+                    </button>
+                </span>
+                <button class="more-horiz">
+                    <i class="material-icons">more_horiz</i>
+                </button>
+            </section>
+            <ul class="engagement-section">
+                <li class="post-qty"><b>89</b> publicaciones</li>
+                <li class="followers-qty"><b>520</b> seguidores</li>
+                <li class="following-qty"><b>1,093</b> seguidos</li>
+            </ul>
+            <section class="text-section">
+                <h2>Iridian Guadalupe</h2>
+                <p class="profile-description">
+                    Desarrollador WEB
+                    <br><a href="http://irinah.com" target="_blank" class="website">irinah.com</a>
+                </p>
+                <div class="friends-following">
+                    <a href="" class="profile-link">irinahdotcom</a>, 
+                    <a href="" class="profile-link">guadalupe</a>
+                    <a href="" class="more-friends">y 4 más siguen a esta cuenta.</a>
+                </div>
+            </section>
+        </section>
+    </header>
+    <section class="stories-section">
+        <ul class="stories-list">
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=18" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=19" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=20" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=21" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=22" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=23" alt=""></figure><span class="story-name">Historia</span></li>
+            <li class="story"><figure class="storie-image"><img src="https://picsum.photos/77?random=24" alt=""></figure><span class="story-name">Historia</span></li>
+        </ul>
+    </section>
+    <section class="post-list">
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./pexels-anastasia-shuraeva-4989514.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="./pexels-torsten-dettlaff-193004.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu3.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu2.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu3.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu2.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="compu3.jpg" alt="">
+                <span class="post-overlay">
+                    <p>
+                        <span class="post-likes">
+                            150
+                        </span>
+                        <span class="post-comments">
+                            10
+                        </span>
+                    </p>
+                </span>
+            </figure>
+        </a>
+    </section> 
+</body>
+</html>

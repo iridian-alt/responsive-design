@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Plattzi Conf</title>
+    <style>
+        .text-platzi {
+            color: #97c93e !important;
+          }
+          
+          .btn-platzi {
+            background-color: #97c93e;
+            color: white;
+          }
+          
+          .btn-platzi:hover {
+            background-color: #82ad36;
+          }
+          
+          #header img {
+            width: 80px;
+          }
+          
+          #main .carousel-inner img {
+            max-height: 70vh;
+            object-fit: cover;
+            filter: grayscale(70%);
+          }
+          
+          #carousel {
+            position: relative;
+          }
+          
+          #carousel .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+          }
+          
+          #carousel .overlay .container,
+          #carousel .overlay .row {
+            height: 100%;
+          }
+          
+          #place-time {
+            background-color: #343a40;
+            color: white;
+          }
+          
+          #place-time img {
+            max-width: 100%;
+          }
+          
+          #footer {
+            background: linear-gradient(90deg,#1c3643,#273b47 25%,#1e5372);
+          }
+          
+          #footer a {
+            color: white;
+          }
+    </style>
+  </head>
+  <body>
+         <!-- Speakers -->
+        <section id="speakers" class="mt-4">
+            <div class="container">
+            <div class="row">
+                <div class="col text-center text-uppercase">
+                <small>Conoce a los</small>
+                <h2>Oradores</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/speakers/sacha.jpg" alt="Foto de Sacha">
+                    <div class="card-body">
+                    <div class="badges">
+                        <span class="badge badge-warning">JavaScript</span>
+                        <span class="badge badge-info">React</span>
+                    </div>
+                    <h5 class="card-title">Sacha Lifszyc</h5>
+                    <p class="card-text">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/speakers/leonidas2.jpeg" alt="Foto de Sacha">
+                    <div class="card-body">
+                    <div class="badges">
+                        <span class="badge badge-warning">JavaScript</span>
+                        <span class="badge badge-info">React</span>
+                    </div>
+                    <h5 class="card-title">Leonidas Esteban</h5>
+                    <p class="card-text">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/speakers/freddy.jpeg" alt="Foto de Sacha">
+                    <div class="card-body">
+                    <div class="badges">
+                        <span class="badge badge-secondary">Negocios</span>
+                        <span class="badge badge-danger">Startups</span>
+                    </div>
+                    <h5 class="card-title">Freddy Vega</h5>
+                    <p class="card-text">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="assets/speakers/cvander.jpeg" alt="Foto de Sacha">
+                    <div class="card-body">
+                    <div class="badges">
+                        <span class="badge badge-secondary">Negocios</span>
+                        <span class="badge badge-danger">Startups</span>
+                    </div>
+                    <h5 class="card-title">Christian Van Der H.</h5>
+                    <p class="card-text">Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum. In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at metus.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- /Speakers -->
+  
+     <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

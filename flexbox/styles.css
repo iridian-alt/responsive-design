@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.header {
+    outline: 1px solid  gold;
+    height: 3rem;
+}
+.container {
+    display: flex;
+    height: inherit;
+}
+.content {
+    outline: 1px solid cyan;
+    flex: 1; 
+}
+.content > p {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-transform: uppercase;
+    color:#4169e1;
+    font-size: 3em;
+    font-weight: bold;
+}
+.aside {
+    outline: 1px solid magenta;
+    flex: 0 0 25%;
+}
+.footer {
+    outline: 1px solid salmon;
+    height: 6rem;
+    margin-top: auto;
+    background-color: salmon;
+    color: lightgoldenrodyellow;
+    text-align: center;
+}
+.footer > p{
+    line-height: 6em;
+}
+.menu {
+    display: flex;
+}
+.menu-item {
+    list-style: none;
+    flex:    1;
+    outline: 1px solid cyan;
+    line-height: 3rem; /*solo es valido cuando hay una linea no cuado hay dos y por que estamos tomando el valor del header*/
+    text-align: center;
+    transition: flex .5s;
+}
+.menu-item:hover {
+    flex: 8;
+}
+li:nth-child(2n+1) {
+    background-color: lightcoral;
+    color: lightgoldenrodyellow;
+}
+li:nth-child(2n){
+    background-color: royalblue;
+    color: lightgoldenrodyellow;
+}
+.imagen {
+    max-width: 100%;
+    background-repeat: repeat;
+    
+}
